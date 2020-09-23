@@ -4,15 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="23c31a6a55a940568c9d230b8f6bb8dd" Name="Diagram1" ZoomLevel="55">
-        <EntityTypeShape EntityType="LibraryModel.AccSet" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibraryModel.BookSet" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibraryModel.ClientSet" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibraryModel.EmpSet" Width="1.5" PointX="7.625" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibraryModel.Users" Width="1.5" PointX="2.625" PointY="5" IsExpanded="true" />
-        <AssociationConnector Association="LibraryModel.FK_AccSet_BookSet" ManuallyRouted="false" />
-        <AssociationConnector Association="LibraryModel.FK_AccSet_ClientSet" ManuallyRouted="false" />
-        <AssociationConnector Association="LibraryModel.FK_AccSet_EmpSet" ManuallyRouted="false" />
+      <Diagram DiagramId="61924e02bd0f4ad08df85c696371776f" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryModel.ClientSet" Width="1.5" PointX="1.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Users" Width="1.5" PointX="3.375" PointY="1.5" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

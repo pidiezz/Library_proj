@@ -55,23 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccSet.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BookSet.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
-    </Compile>
     <Compile Include="ClientSet.cs">
       <DependentUpon>ModelLibrary.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmpSet.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FormAcc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAcc.Designer.cs">
-      <DependentUpon>FormAcc.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAuthorization.cs">
       <SubType>Form</SubType>
@@ -79,17 +64,17 @@
     <Compile Include="FormAuthorization.Designer.cs">
       <DependentUpon>FormAuthorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCall.Designer.cs">
+      <DependentUpon>FormCall.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormClients.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormClients.Designer.cs">
       <DependentUpon>FormClients.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEmp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEmp.Designer.cs">
-      <DependentUpon>FormEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -117,17 +102,14 @@
     <Compile Include="Users.cs">
       <DependentUpon>ModelLibrary.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormAcc.resx">
-      <DependentUpon>FormAcc.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormAuthorization.resx">
       <DependentUpon>FormAuthorization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCall.resx">
+      <DependentUpon>FormCall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEmp.resx">
-      <DependentUpon>FormEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

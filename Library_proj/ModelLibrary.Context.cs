@@ -25,10 +25,7 @@ namespace Library_proj
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AccSet> AccSet { get; set; }
-        public virtual DbSet<BookSet> BookSet { get; set; }
         public virtual DbSet<ClientSet> ClientSet { get; set; }
-        public virtual DbSet<EmpSet> EmpSet { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

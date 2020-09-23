@@ -10,27 +10,22 @@ using System.Windows.Forms;
 
 namespace Library_proj
 {
-    public partial class FormMenu : Form
+    public partial class FormCall : Form
     {
-        public FormMenu()
+        public FormCall()
         {
             InitializeComponent();
-
-            
-
         }
 
-        private void buttonClients_Click(object sender, EventArgs e)
+   
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Form formClient = new FormClients();
-            formClient.Show();
+           
+            Close();
+
         }
 
-    
-        }
-
-     
-
-
+        
     }
-
+}

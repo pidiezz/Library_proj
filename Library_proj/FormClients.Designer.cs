@@ -28,92 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelPhone = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClients));
             this.listViewClient = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.Accept = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelPhone = new System.Windows.Forms.Label();
             this.buttonDel = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonProzvon = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelAccept = new System.Windows.Forms.Label();
+            this.comboBoxAccept = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(13, 356);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(240, 22);
-            this.textBoxEmail.TabIndex = 15;
-            // 
-            // textBoxPhone
-            // 
-            this.textBoxPhone.Location = new System.Drawing.Point(13, 275);
-            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(240, 22);
-            this.textBoxPhone.TabIndex = 14;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(13, 204);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(240, 22);
-            this.textBoxName.TabIndex = 13;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(10, 335);
-            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(49, 17);
-            this.labelEmail.TabIndex = 11;
-            this.labelEmail.Text = "Почта";
-            // 
-            // labelPhone
-            // 
-            this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(10, 254);
-            this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(72, 17);
-            this.labelPhone.TabIndex = 12;
-            this.labelPhone.Text = "Телефон ";
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(10, 183);
-            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(39, 17);
-            this.labelName.TabIndex = 10;
-            this.labelName.Text = "Имя ";
             // 
             // listViewClient
             // 
             this.listViewClient.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
-            this.ColumnHeader1,
+            this.Name,
             this.Phone,
-            this.Email});
+            this.Accept});
             this.listViewClient.FullRowSelect = true;
             this.listViewClient.GridLines = true;
             this.listViewClient.HideSelection = false;
-            this.listViewClient.Location = new System.Drawing.Point(298, 13);
-            this.listViewClient.Margin = new System.Windows.Forms.Padding(4);
+            this.listViewClient.Location = new System.Drawing.Point(524, 12);
             this.listViewClient.MultiSelect = false;
             this.listViewClient.Name = "listViewClient";
-            this.listViewClient.Size = new System.Drawing.Size(498, 479);
-            this.listViewClient.TabIndex = 16;
+            this.listViewClient.Size = new System.Drawing.Size(368, 419);
+            this.listViewClient.TabIndex = 0;
             this.listViewClient.UseCompatibleStateImageBehavior = false;
             this.listViewClient.View = System.Windows.Forms.View.Details;
             this.listViewClient.SelectedIndexChanged += new System.EventHandler(this.listViewClient_SelectedIndexChanged_1);
@@ -121,89 +71,175 @@
             // id
             // 
             this.id.Text = "id";
+            this.id.Width = 130;
             // 
-            // ColumnHeader1
+            // Name
             // 
-            this.ColumnHeader1.Text = "Имя";
+            this.Name.Text = "Имя";
             // 
             // Phone
             // 
-            this.Phone.Text = "Номер телефона";
+            this.Phone.Text = "Телефон";
             // 
-            // Email
+            // Accept
             // 
-            this.Email.Text = "Почта";
+            this.Accept.Text = "Звонок";
             // 
-            // buttonAdd
+            // textBoxName
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(72, 516);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(247, 59);
-            this.buttonAdd.TabIndex = 17;
-            this.buttonAdd.Text = "Создать ";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click_1);
+            this.textBoxName.Location = new System.Drawing.Point(96, 200);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(343, 22);
+            this.textBoxName.TabIndex = 1;
             // 
-            // buttonEdit
+            // textBoxPhone
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(348, 516);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(254, 59);
-            this.buttonEdit.TabIndex = 18;
-            this.buttonEdit.Text = "Изменить";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click_1);
+            this.textBoxPhone.Location = new System.Drawing.Point(96, 266);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(343, 22);
+            this.textBoxPhone.TabIndex = 2;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(93, 180);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(35, 17);
+            this.labelName.TabIndex = 3;
+            this.labelName.Text = "Имя";
+            // 
+            // labelPhone
+            // 
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.Location = new System.Drawing.Point(93, 246);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new System.Drawing.Size(68, 17);
+            this.labelPhone.TabIndex = 4;
+            this.labelPhone.Text = "Телефон";
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(623, 516);
+            this.buttonDel.Location = new System.Drawing.Point(899, 451);
             this.buttonDel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(247, 59);
-            this.buttonDel.TabIndex = 19;
+            this.buttonDel.TabIndex = 30;
             this.buttonDel.Text = "Удалить ";
             this.buttonDel.UseVisualStyleBackColor = true;
-            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click_1);
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(459, 451);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(254, 59);
+            this.buttonEdit.TabIndex = 29;
+            this.buttonEdit.Text = "Изменить";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(37, 451);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(247, 59);
+            this.buttonAdd.TabIndex = 28;
+            this.buttonAdd.Text = "Создать ";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonProzvon
+            // 
+            this.buttonProzvon.Location = new System.Drawing.Point(111, 376);
+            this.buttonProzvon.Name = "buttonProzvon";
+            this.buttonProzvon.Size = new System.Drawing.Size(298, 55);
+            this.buttonProzvon.TabIndex = 31;
+            this.buttonProzvon.Text = "Звонок";
+            this.buttonProzvon.UseVisualStyleBackColor = true;
+            this.buttonProzvon.Click += new System.EventHandler(this.Prozvon_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(943, 12);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(167, 59);
+            this.buttonExit.TabIndex = 32;
+            this.buttonExit.Text = "Выход из системы";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, -34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(351, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelAccept
+            // 
+            this.labelAccept.AutoSize = true;
+            this.labelAccept.Location = new System.Drawing.Point(93, 312);
+            this.labelAccept.Name = "labelAccept";
+            this.labelAccept.Size = new System.Drawing.Size(162, 17);
+            this.labelAccept.TabIndex = 35;
+            this.labelAccept.Text = "Подтверждение звонка";
+            // 
+            // comboBoxAccept
+            // 
+            this.comboBoxAccept.FormattingEnabled = true;
+            this.comboBoxAccept.Items.AddRange(new object[] {
+            "+",
+            "-"});
+            this.comboBoxAccept.Location = new System.Drawing.Point(96, 332);
+            this.comboBoxAccept.Name = "comboBoxAccept";
+            this.comboBoxAccept.Size = new System.Drawing.Size(159, 24);
+            this.comboBoxAccept.TabIndex = 36;
             // 
             // FormClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 588);
+            this.ClientSize = new System.Drawing.Size(1178, 523);
+            this.Controls.Add(this.comboBoxAccept);
+            this.Controls.Add(this.labelAccept);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonProzvon);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.listViewClient);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.labelPhone);
             this.Controls.Add(this.labelName);
-            this.Name = "FormClients";
-            this.Text = "Клиенты";
+            this.Controls.Add(this.textBoxPhone);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.listViewClient);
+            this.Controls.Add(this.pictureBox1);
+            
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxPhone;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Label labelPhone;
-        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.ListView listViewClient;
         private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader ColumnHeader1;
+        private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader Phone;
-        private System.Windows.Forms.ColumnHeader Email;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxPhone;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonProzvon;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ColumnHeader Accept;
+        private System.Windows.Forms.Label labelAccept;
+        private System.Windows.Forms.ComboBox comboBoxAccept;
     }
 }

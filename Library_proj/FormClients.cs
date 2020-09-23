@@ -17,7 +17,7 @@ namespace Library_proj
             InitializeComponent();
             ShowClient();
         }
-    
+
         void ShowClient()
         {
             listViewClient.Items.Clear();
@@ -25,7 +25,7 @@ namespace Library_proj
             {
                 ListViewItem item = new ListViewItem(new string[]
                 {
-                    clientsSet.id.ToString(), clientsSet.Name, clientsSet.Phone, clientsSet.Email
+                    clientsSet.id.ToString(), clientsSet.Name, clientsSet.Phone, clientsSet.Accept, 
                 });
                 item.Tag = clientsSet;
                 listViewClient.Items.Add(item);
@@ -36,58 +36,33 @@ namespace Library_proj
 
         }
 
-        private void listViewClient_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listViewClient.SelectedItems.Count == 1)
-            {
-                ClientSet clientsSet = listViewClient.SelectedItems[0].Tag as ClientSet;
-                textBoxName.Text = clientsSet.Name;
-                textBoxPhone.Text = clientsSet.Phone;
-                textBoxEmail.Text = clientsSet.Email;
-            }
-            else
-            {
-                textBoxName.Text = "";
-
-                textBoxPhone.Text = "";
-                textBoxEmail.Text = "";
-            }
-        }
-
-       
-
-   
-
-        private void listViewClient_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAdd_Click_1(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             ClientSet clientsSet = new ClientSet();
             clientsSet.Name = textBoxName.Text;
             clientsSet.Phone = textBoxPhone.Text;
-            clientsSet.Email = textBoxEmail.Text;
+            clientsSet.Accept = comboBoxAccept.Text;
+
             Program.libDb.ClientSet.Add(clientsSet);
             Program.libDb.SaveChanges();
             ShowClient();
         }
 
-        private void buttonEdit_Click_1(object sender, EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
             if (listViewClient.SelectedItems.Count == 1)
             {
                 ClientSet clientsSet = listViewClient.SelectedItems[0].Tag as ClientSet;
                 clientsSet.Name = textBoxName.Text;
                 clientsSet.Phone = textBoxPhone.Text;
-                clientsSet.Email = textBoxEmail.Text;
+                clientsSet.Accept = comboBoxAccept.Text;
+                
                 Program.libDb.SaveChanges();
                 ShowClient();
             }
         }
 
-        private void buttonDel_Click_1(object sender, EventArgs e)
+        private void buttonDel_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,14 +74,52 @@ namespace Library_proj
                     ShowClient();
                 }
                 textBoxName.Text = "";
-
                 textBoxPhone.Text = "";
-                textBoxEmail.Text = "";
+                comboBoxAccept.Text = "";
+             
             }
             catch
             {
                 MessageBox.Show("Невозможно удалить, эта кнопка используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void listViewClient_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listViewClient.SelectedItems.Count == 1)
+            {
+                ClientSet clientsSet = listViewClient.SelectedItems[0].Tag as ClientSet;
+                textBoxName.Text = clientsSet.Name;
+                textBoxPhone.Text = clientsSet.Phone;
+                comboBoxAccept.Text = clientsSet.Accept;
+            }
+            else
+            {
+                textBoxName.Text = "";
+                textBoxPhone.Text = "";
+                comboBoxAccept.Text = "";
+            }
+
+        }
+       
+        private void Prozvon_Click(object sender, EventArgs e)
+        {
+            if (listViewClient.SelectedItems.Count == 1)
+            {
+                ClientSet clientsSet = listViewClient.SelectedItems[0].Tag as ClientSet;
+                Form formCall = new FormCall();
+                formCall.Show();
+            }
+
+
+            
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

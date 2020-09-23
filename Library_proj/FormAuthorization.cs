@@ -25,52 +25,6 @@ namespace Library_proj
             InitializeComponent();
         }
 
-        private void FormAuthorization_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonOK_Click_1(object sender, EventArgs e)
-        {
-            if (textBoxLogin.Text == " " && textBoxPassword.Text == " ")
-            {
-                MessageBox.Show("введите данные", "ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                bool key = false;
-                foreach (Users user in Program.libDb.Users)
-                {
-                    if (textBoxLogin.Text == user.Login && textBoxPassword.Text == user.Password)
-                    {
-                        key = true;
-                        users.login = user.Login;
-                        users.password = user.Password;
-                        users.type = user.Type;
-                    }
-                }
-                if (!key)
-                {
-                    MessageBox.Show("проверьте данные", "пользователь не найден", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBoxLogin.Text = " ";
-                    textBoxPassword.Text = " ";
-                }
-                else
-                {
-
-                    FormMenu menu = new FormMenu();
-                    menu.Show();
-                    this.Hide();
-                }
-
-            }
-        }
-
-       
-
-       
-
         private void buttonOK_Click(object sender, EventArgs e)
         {
             if (textBoxLogin.Text == " " && textBoxPassword.Text == " ")
@@ -100,8 +54,8 @@ namespace Library_proj
                 else
                 {
 
-                    FormMenu menu = new FormMenu();
-                    menu.Show();
+                    FormClients clients = new FormClients();
+                    clients.Show();
                     this.Hide();
                 }
 

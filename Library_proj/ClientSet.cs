@@ -14,18 +14,9 @@ namespace Library_proj
     
     public partial class ClientSet
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ClientSet()
-        {
-            this.AccSet = new HashSet<AccSet>();
-        }
-    
         public int id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
-        public string Email { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AccSet> AccSet { get; set; }
+        public string Accept { get; set; }
     }
 }
